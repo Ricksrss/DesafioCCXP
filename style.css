@@ -134,6 +134,10 @@ header {
     box-shadow: 10px 10px 10px 10px  grey;
 }
 
+.card-selected{
+    border: 5px solid green;
+}
+
 @media (max-width: 768px) {
     header {
         height: 80px;
