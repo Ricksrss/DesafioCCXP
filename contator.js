@@ -4,24 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const minutosElement = document.getElementById('minutos');
     const segundosElement = document.getElementById('segundos');
 
-    const lancamento = "17 dec 2023";
+    const lancamento = new Date("2023-12-17T00:00:00Z").getTime();
 
     function countDown() {
-        const dataLanc = new Date(lancamento);
-        const hoje = new Date();
+        const agora = new Date().getTime();
+        const diferenca = lancamento - agora;
 
-        const segTotal = (dataLanc - hoje) / 1000;
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
 
-        const finalDias = Math.floor(segTotal / 60 / 60 / 24);
-        const finalHoras = Math.floor(segTotal / 60 / 60) % 24;
-        const finalMinutos = Math.floor(segTotal / 60) % 60;
-        const finalSegundos = Math.floor(segTotal) % 60;
-
-        
-        diasElement.innerHTML = `${formatoTempo(finalDias)} D`;
-        horasElement.innerHTML = `${formatoTempo(finalHoras)} H`;
-        minutosElement.innerHTML = `${formatoTempo(finalMinutos)} M`;
-        segundosElement.innerHTML = `${formatoTempo(finalSegundos)} S`;
+        diasElement.textContent = `${formatoTempo(dias)} D`;
+        horasElement.textContent = `${formatoTempo(horas)} H`;
+        minutosElement.textContent = `${formatoTempo(minutos)} M`;
+        segundosElement.textContent = `${formatoTempo(segundos)} S`;
     }
 
     function formatoTempo(tempo) {
