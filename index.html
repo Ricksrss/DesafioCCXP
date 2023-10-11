@@ -10,31 +10,34 @@
 
 <body>
     <header>
-        <img id="logo" src="/img/logoccxp22.svg" alt="CCXP" width="150px">
+        <img id="logo" src="logoccxp22.svg" alt="CCXP" width="150px">
     </header>
     <div class="container">
         <section id="secao1">
             <div id="descricao">
                 <h1 id="titulo">REVIVA O ÉPICO</h1>
                 <p id="data"><strong>DE 01 A 04 DE DEZEMBRO</strong></p>
-                <p>Você consegue sentir? É aquela sensação de finalmente poder falar em voz alta: "estamos em casa". Sim, em
-                    dezembro de 2022, teremos a volta da CCXP física. Mas não será qualquer CCXP, vai ser a maior de todos
-                    os tempos. Prepare-se para visitar seus universos favoritos, explorar o Artists' Valley, se emocionar
+                <p>Você consegue sentir? É aquela sensação de finalmente poder falar em voz alta: "estamos em casa".
+                    Sim, em
+                    dezembro de 2022, teremos a volta da CCXP física. Mas não será qualquer CCXP, vai ser a maior de
+                    todos
+                    os tempos. Prepare-se para visitar seus universos favoritos, explorar o Artists' Valley, se
+                    emocionar
                     nos auditórios e encontrar aventuras épicas a cada passo pelos nossos corredores.</p>
             </div>
         </section>
         <div id="interno">
             <div id="contador">
-                <p class="ct" id="dias"></p>
-                <p class="ct" id="horas"></p>
-                <p class="ct" id="minutos"></p>
-                <p class="ct" id="segundos"></p>
+                <p class="ct" id="dias">00 D</p>
+                <p class="ct" id="horas">00 H</p>
+                <p class="ct" id="minutos">00 M</p>
+                <p class="ct" id="segundos">00 S</p>
             </div>
             <div id="interno2">
                 <p id="aviso"><strong>PARA A MAIOR CCXP DE TODOS OS TEMPOS</strong></p>
             </div>
             <div id="video-container">
-                <video width="100%" controls loop src="/video/Arlequina.mp4" type="video/mp4"></video>
+                <video width="100%" controls loop src="Arlequina.mp4" type="video/mp4"></video>
             </div>
         </div>
     </div>
@@ -42,10 +45,14 @@
         <div id="ingresso">
             <div id="ing1"><strong>AINDA DÁ TEMPO DE GARANTIR O SEU, MAS CORRE!</strong></div>
             <div id="ingresso2">
-                <img src="/img/qui.svg" alt="">
-                <img src="/img/sex.svg" alt="">
-                <img src="/img/esgotado.svg" alt="">
-                <img src="/img/dom.svg" alt="">
+                <img src="qui.svg" onmouseover="highlightCard('#quinta')" onmouseleave="highlightCard('#quinta')"
+                    id="quinta" alt="">
+                <img src="sex.svg" onmouseover="highlightCard('#sexta')" onmouseleave="highlightCard('#sexta')" id="sexta"
+                    alt="">
+                <img src="esgotado.svg" onmouseover="highlightCard('#esgotado')" onmouseleave="highlightCard('#esgotado')"
+                    id="esgotado" alt="">
+                <img src="dom.svg" onmouseover="highlightCard('#domingo')" onmouseleave="highlightCard('#domingo')"
+                    id="domingo" alt="">
             </div>
         </div>
         <div id="comprar">
@@ -53,6 +60,7 @@
         </div>
     </section>
     <script src="contador.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
