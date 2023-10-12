@@ -138,6 +138,21 @@ header {
     border: 5px solid green;
 }
 
+input {
+    background-color: #514988;
+    border-radius:  10px;
+    color: #FFFFFF;
+    border: 0pt;
+    margin: 30px;
+    width: 300px;
+    height: 70px;
+    font-size: 30px;
+}
+
+#footer{
+    background-color: #FFD900;
+}
+
 @media (max-width: 768px) {
     header {
         height: 80px;
