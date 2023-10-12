@@ -15,6 +15,17 @@ function highlightCard(selector) {
     element.classList.toggle("card-highlight");
 }
 
+function checkKeyboardCode(){
+    document.addEventListener("keydown",
+    (event) => {
+        var name = event.key;
+        var code = event.code;
+        alert(`Tecla Pressionada ${name} \r\n Key code value: ${code}`);
+    },
+    false
+    );
+}
+
 function addKeyboardEventListeners() {
     document.addEventListener('keydown', (event) => {
 
@@ -60,7 +71,9 @@ function selectCard(selector) {
 }
 
 function showSelectedCards() {
-    if (ingressos.lenght > 0) alert("Ingressos Selecionados:" + ingressos);
+    if (ingressos.length > 0) {
+        alert("Ingressos Selecionados: " + ingressos);
+    }
 }
 
 addKeyboardEventListeners();
